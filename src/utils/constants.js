@@ -7,26 +7,122 @@ export const SITE_CONFIG = {
 
 export const CONTENT = {
   nav: {
-    home: 'Inicio',
-    about: 'Nosotros',
-    podcast: 'Podcast',
-    contact: 'Contacto',
+    home: { label: 'Inicio', href: '#home' },
   },
 
   hero: {
-    eyebrow: 'Una propuesta de cultura compartida',
-    headline: 'Dos empresas. Una voz.',
-    subheadline: 'Cómo un podcast se convierte en el pegamento que une a BlackSip.',
-    cta: 'Descubre el camino',
+    headline: 'Nos convertimos en una voz',
+    subheadline: 'La innovación en E-commerce no es solo técnica, es cultural.',
+    cta: 'Nuestra cultura como activo estratégico',
+  },
+
+  preambulo: {
+    quote: 'La mejora del 1% en muchas áreas genera un cambio extraordinario a largo plazo.',
+    body: {
+      intro:
+        'Durante años, el equipo británico de ciclismo fue mediocre. Todo cambió cuando Dave Brailsford implementó la estrategia de la acumulación de mejoras marginales:',
+      improvements: [
+        'Ajustaron la posición de los ciclistas.',
+        'Mejoraron la ropa.',
+        'Cambiaron la almohada en la que dormían.',
+        'Optimizaron la higiene para evitar enfermedades.',
+      ],
+      resultsTitle: 'Resultado:',
+      results: [
+        'En 5 años ganaron 66 medallas olímpicas y paralímpicas.',
+        'Ganaron 5 Tour de Francia en 6 años.',
+      ],
+      closing:
+        'Un entorno de mejora continua y hábitos positivos puede convertir a un equipo promedio en una potencia mundial.',
+    },
+  },
+
+  protagonista: {
+    diploma: {
+      title: 'Diploma de Podcaster.',
+      subtitle: 'Aún sigo aprendiendo cositas, vuelve pronto...',
+      href: 'https://platzi.com/p/arleyguerrero/ruta/7338-ruta/diploma/detalle/',
+      thumbnailSrc: '/dist/assets/thumb.png',
+      thumbnailAlt: 'Platzi',
+      providerLabel: 'Platzi',
+      providerUrl: 'www.platzi.com',
+    },
+    learned: {
+      heading: 'Aprendí qué:',
+      items: [
+        {
+          title: 'Los podcast nos entregan mucha data',
+          href: 'https://naranjamedia.co/casos-de-exito/nu',
+        },
+        {
+          title: 'Compartir la cultura',
+          href: 'https://youtu.be/n3YDMGQMj4s?si=5RHN5QujfifAwz6U&t=4174',
+        },
+        {
+          title: 'El auge del Podcast',
+          href: 'https://www.revistapym.com.co/articulos/digital/74929/el-auge-del-podcast-tendencias-y-proyecciones',
+        },
+      ],
+    },
+  },
+
+  pilotMetrics: {
+    headline: '¿Qué aprendidmos en nuestro piloto?',
+    kpis: [
+      { label: 'Últimos 30 días', value: 1, deltaLabel: '-67%' },
+      { label: 'Todos los tiempos', value: 45 },
+    ],
+    spotifyCta: {
+      title: 'Escucha el episodio en Spotify',
+      subtitle: 'Visítanos y escucha el piloto.',
+      href: 'https://open.spotify.com/show/1Lk3ruMhpHYGFJXPhmIbJ8',
+    },
+    downloadsByLocation: {
+      title: 'Descargas por ubicación',
+      subtitle: '7 de abril – 6 de mayo de 2026',
+      imageSrc: '/dist/assets/mapa.png',
+      imageAlt: 'Mapa de descargas por ubicación',
+      rows: [
+        { name: 'United States', downloads: 12, percent: 54.55 },
+        {
+          name: 'Colombia',
+          downloads: 5,
+          percent: 22.73,
+          children: [
+            { name: 'Bogotá', downloads: 4, percent: 18.18 },
+            { name: 'Medellín', downloads: 1, percent: 4.55 },
+          ],
+        },
+      ],
+    },
+    listeners: {
+      title: 'Oyentes',
+      series: [
+        { month: '2025-03', value: 9 },
+        { month: '2025-04', value: 14 },
+        { month: '2025-05', value: 1 },
+        { month: '2025-06', value: 0 },
+        { month: '2025-07', value: 0 },
+        { month: '2025-08', value: 0 },
+        { month: '2025-09', value: 1 },
+        { month: '2025-10', value: 2 },
+        { month: '2025-11', value: 1 },
+        { month: '2025-12', value: 0 },
+        { month: '2026-01', value: 4 },
+        { month: '2026-02', value: 3 },
+        { month: '2026-03', value: 0 },
+        { month: '2026-04', value: 4 },
+      ],
+    },
   },
 
   fragmentation: {
-    headline: 'El reto de la integración',
-    description: 'Cuando dos culturas empresariales convergen, la información se dispersa. La comunicación se fragmenta. Las voces se pierden en silos.',
+    headline: 'El ADN de la innovación',
+    description: 'Compartiremos de la voz de nuestros lideres, la evolución de nuestra cultura, su impacto en el equipo, y cómo nos ayuda a ser más eficientes y efectivos.',
     listItems: [
-      'Información dispersa en múltiples canales',
-      'Culturas que aún se sienten como "nosotros" y "ellos"',
-      'Dificultad en transmitir valores en equipo remoto',
+      'La voz conecta mejor que los textos',
+      'Disminuiremos la información dispersa',
+      'Dificultad en transmitir las ideas',
       'Fricciones que restan energía y claridad',
     ],
   },
@@ -43,37 +139,30 @@ export const CONTENT = {
   },
 
   bentoGrid: {
-    headline: '¿Por qué un Podcast fortalece la cultura?',
-    description: 'Explora los pilares que transforman un podcast en el corazón de tu empresa.',
+    headline: 'Se enseña con ejemplo',
+    description: '',
     items: [
       {
         id: 'communication',
-        title: 'Comunicación sin barreras',
-        description: 'La voz humana conecta de forma que los textos no pueden.',
-        metric: '+78% mejor retención de información',
-        tooltip: 'Los estudios muestran que la gente retiene 65% más información cuando la escucha versus cuando la lee.',
+        title: '¿Quienes somos?',
+        description: 'Le hablaremos directamente a nuestros Blacksippers.',
+        metric: 'Será el primer episodio',
+        tooltip: 'Nuevamente nuestro C Level nos presentará nuestra misión por darle identidad a nuestra cultura.',
       },
       {
         id: 'cohesion',
         title: 'Cohesión cultural',
-        description: 'Un espacio donde los valores de la marca cobran vida.',
-        metric: '+45% en sentimiento de pertenencia',
-        tooltip: 'Empresas con podcasts internos reportan mayor engagement y retención de talento.',
+        description: '¿Cómo eran nuestras versiones antes de la fusión?',
+        metric: 'Nuestro sentimiento de pertenencia',
+        tooltip: 'Recordaremos con cariño de dónde venimos, y qué conservaremos en esta nueva versión.',
       },
       {
         id: 'authenticity',
         title: 'Autenticidad compartida',
-        description: 'Las historias reales de nuestro equipo, sin filtros.',
-        metric: '+60% en confianza interna',
-        tooltip: 'La narrativa auténtica fortalece las relaciones internas y la confianza en el liderazgo.',
-      },
-      {
-        id: 'scalability',
-        title: 'Escalabilidad remota',
-        description: 'Llega a todos, en cualquier lugar, en cualquier momento.',
-        metric: '24/7 accesible',
-        tooltip: 'Con equipos distribuidos, el podcast se convierte en el único canal que truly unifica.',
-      },
+        description: 'Historias reales de nuestro equipo, sin filtros.',
+        metric: 'Confianza en nuestro equipo de lideres',
+        tooltip: 'Nuestros directores de forma autentica nos impulsarán para los retos que enfrentaremos.',
+      }
     ],
   },
 
@@ -101,13 +190,13 @@ export const CONTENT = {
   },
 
   evolution: {
-    headline: 'De la cultura interna al mercado B2B',
+    headline: '¿Empezamos?',
     description: 'Primero, consolidamos la voz interna. Luego, la transformamos en oportunidad.',
     phases: [
       {
         phase: 'Fase 1: Identidad interna',
-        duration: 'Ahora - 3 meses',
-        description: 'Construimos nuestros primeros episodios, consolidamos la voz de BlackSip unificada.',
+        duration: 'Ahora - 6 meses',
+        description: 'Construimos nuestros primeros episodios, consolidamos la voz y cultura de BlackSip .',
         focus: 'Cultura, valores, historias del equipo',
       },
       {
@@ -118,16 +207,10 @@ export const CONTENT = {
       },
       {
         phase: 'Fase 3: Expansión B2B',
-        duration: '6+ meses',
+        duration: '8 - 12 meses',
         description: 'Lanzamos "El Podcast de BlackSip" como recurso de valor para clientes y mercado.',
-        focus: 'Casos de éxito, estrategia, tendencias en marketing y ecommerce',
-      },
-      {
-        phase: 'Fase 4: Diferenciación de mercado',
-        duration: 'Mediano plazo',
-        description: 'Posicionamiento como agencia con voz propia. Clientes nos encuentran en Spotify, Apple Podcast, etc.',
-        focus: 'Liderazgo de pensamiento, atracción de talentos, nuevos clientes',
-      },
+        focus: 'Casos de éxito, estrategia, tendencias en marketing y e-commerce',
+      }
     ],
   },
 

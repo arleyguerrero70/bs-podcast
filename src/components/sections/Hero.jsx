@@ -26,7 +26,7 @@ export default function Hero() {
   };
 
   return (
-    <section ref={ref} id="home" className="min-h-screen flex items-center justify-center bg-white pt-24">
+    <section ref={ref} id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-black pt-24">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <motion.div
           variants={containerVariants}
@@ -34,12 +34,6 @@ export default function Hero() {
           animate={inView ? 'visible' : 'hidden'}
         >
           {/* Eyebrow */}
-          <motion.p
-            variants={itemVariants}
-            className="text-sm font-semibold text-gray-600 mb-6 tracking-wide uppercase"
-          >
-            {CONTENT.hero.eyebrow}
-          </motion.p>
 
           {/* Headline */}
           <motion.h1
@@ -52,20 +46,11 @@ export default function Hero() {
           {/* Subheadline */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto"
+            className="text-lg md:text-2xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto"
           >
             {CONTENT.hero.subheadline}
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.button
-            variants={itemVariants}
-            className="px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 inline-block"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {CONTENT.hero.cta}
-          </motion.button>
         </motion.div>
 
         {/* Scroll indicator */}
@@ -74,8 +59,8 @@ export default function Hero() {
           transition={{ duration: 2, repeat: Infinity }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <div className="w-6 h-10 border-2 border-black rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-black rounded-full" />
+          <div className="w-6 h-10 border-2 border-black dark:border-white rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-2 bg-black dark:bg-white rounded-full" />
           </div>
         </motion.div>
       </div>

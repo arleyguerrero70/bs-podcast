@@ -67,6 +67,10 @@ html {
   cursor: none;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
 /* Remove default scroll behavior from anchor links during Lenis scroll */
 a {
   scroll-behavior: auto;

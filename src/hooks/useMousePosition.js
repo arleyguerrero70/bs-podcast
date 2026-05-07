@@ -6,10 +6,21 @@ export const useMousePosition = () => {
 
   useEffect(() => {
     let movementTimeout;
+    let rafId = null;
+    let lastEvent = null;
 
     const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-      setIsMoving(true);
+      lastEvent = e;
+
+      if (rafId == null) {
+        rafId = window.requestAnimationFrame(() => {
+          rafId = null;
+          if (!lastEvent) return;
+
+          setMousePosition({ x: lastEvent.clientX, y: lastEvent.clientY });
+          setIsMoving(true);
+        });
+      }
 
       clearTimeout(movementTimeout);
       movementTimeout = setTimeout(() => {
@@ -22,6 +33,9 @@ export const useMousePosition = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       clearTimeout(movementTimeout);
+      if (rafId != null) {
+        window.cancelAnimationFrame(rafId);
+      }
     };
   }, []);
 
